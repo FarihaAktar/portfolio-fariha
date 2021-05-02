@@ -1,0 +1,46 @@
+.contact-section{
+    display: flex;
+}
+.form-div{
+    width: 80%;
+    height: 100vh;
+    background-color: #f6e6e4;
+}
+.get-in-touch{
+    text-align: center;
+}
+.form{
+    width: 50%;
+    padding: 30px 40px;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #e2bcb7;
+}
+.text{
+    border: 1px solid #999b84;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.text-msg{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.submit-btn{
+    padding: 12px 36px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    padding: 10px 47px;
+    border: 2px solid #ff6701;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+.submit-btn:hover{
+    color: #ff6701;
+}

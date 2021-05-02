@@ -1,0 +1,22 @@
+.sidebar{
+    width: 20%;
+    background-color: #ca8a8b;
+    border: 1px solid #eabf9f;
+}
+.sidebar-link{
+    margin:100px auto;
+}
+.sidebar-link li{
+    margin-left: 45px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+.sidebar-link li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    transition: letter-spacing .57s;
+}
+.sidebar-link li a:hover{
+    letter-spacing: 5px;
+}

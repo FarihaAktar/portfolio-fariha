@@ -1,23 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './Components/Home/Home';
+import Projects from './Components/projects/Projects';
+import Contact from './Components/Contact/Contact';
+import AboutMe from './Components/AboutMe/AboutMe';
+import ProjectOne from './Components/projects/projects/projectOne/ProjectOne';
+import ProjectTwo from './Components/projects/projects/ProjectTwo/ProjectTwo';
+import ProjectThree from './Components/projects/projects/ProjectThree/ProjectThree';
+import ProjectFour from './Components/projects/projects/ProjectFour/ProjectFour';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Router>
+          <Switch>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
+            <Route path='/projects'>
+              <Projects></Projects>
+            </Route>
+            <Route path='/aboutMe'>
+              <AboutMe></AboutMe>
+            </Route>
+            <Route path='/contact'>
+              <Contact></Contact>
+            </Route>
+            <Route path='/projectOne'>
+              <ProjectOne></ProjectOne>
+            </Route>
+            <Route path='/projectTwo'>
+              <ProjectTwo></ProjectTwo>
+            </Route>
+            <Route path='/projectThree'>
+              <ProjectThree></ProjectThree>
+            </Route>
+            <Route path='/projectFour'>
+              <ProjectFour></ProjectFour>
+            </Route>
+          </Switch>
+        </Router>
     </div>
   );
 }

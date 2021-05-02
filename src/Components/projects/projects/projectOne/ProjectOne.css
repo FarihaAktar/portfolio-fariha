@@ -1,0 +1,8 @@
+.project-one-section{
+    display: flex;
+}
+.project-one{
+    width: 80%;
+    height: 100vh;
+    padding: 10px 30px;
+}
