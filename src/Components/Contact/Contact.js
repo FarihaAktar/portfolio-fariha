@@ -1,6 +1,10 @@
 import React from 'react';
 import SideBar from '../SideBar/SideBar';
-import './Contact.css'
+import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 const Contact = () => {
 
@@ -25,31 +29,33 @@ const Contact = () => {
         <div className='contact-section'>
             <SideBar></SideBar>
             <div className='form-div'>
-                <h2 className='get-in-touch'>Get In Touch</h2>
-                <form className='form' action="https://formspree.io/f/xzbydvrk" method="POST">
-                    <label for="fname">First Name</label>
-                    <br />
-                    <input className='text' id="fname" type="text" name="name" placeholder='Enter Your Name' required></input>
-                    <br />
-                    <br />
-                    <label for="user-email">Email</label>
-                    <br />
-                    <input className='text' id="user-email" onBlur={handleBlur} type="email" name="_replyto" placeholder='Enter Your Email' required></input>
-                    <br />
-                    <br />
-                    <label for="user-phone">Phone</label>
-                    <br />
-                    <input className='text' id="user-phone" type="text" name="phone" placeholder='+880' required></input>
-                    <br />
-                    <br />
-                    <label for="massage">Massage</label>
-                    <br />
-                    <textarea className='text-msg' id="massage" type="text" name="massage" placeholder='Enter Massage' required></textarea>
-                    <br />
-                    <br />
-                    <input className='submit-btn' type="submit" value="SEND"></input>
+                <div className='contact-info'>
+                    <h3>Contact Info </h3>
+                    <p>Email: <span>farihaaktar258@gmail.com</span> </p>
+                    <div>
+                        <a href="https://www.linkedin.com/feed/"> <FontAwesomeIcon className='contact-icon' icon={faLinkedin} /></a>
+                        <a href="https://github.com/Farihaakter"><FontAwesomeIcon className='contact-icon' icon={faGithubSquare} /></a>
+                    </div>
+                </div>
 
-                </form>
+                <div className='contact-form'>
+                    <h2 className='get-in-touch'>Get In Touch</h2>
+                    <form className='form' action="https://formspree.io/f/xzbydvrk" method="POST">
+                        <input className='text' id="fname" type="text" name="name" placeholder='Your Name' required></input>
+                        <br />
+                        <br />
+                        <input className='text' id="user-email" onBlur={handleBlur} type="email" name="_replyto" placeholder='Your Email' required></input>
+                        <br />
+                        <br />
+                        <input className='text' id="user-phone" type="text" name="phone" placeholder='Phone Number' required></input>
+                        <br />
+                        <br />
+                        <textarea className='text-msg' id="massage" type="text" name="massage" placeholder='Enter Massage' required></textarea>
+                        <br />
+                        <br />
+                        <input className='submit-btn' type="submit" value="SEND"></input>
+                    </form>
+                </div>
             </div>
 
         </div>
